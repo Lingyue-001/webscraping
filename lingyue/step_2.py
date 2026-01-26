@@ -67,7 +67,7 @@ with open("brihat_samhita_index.txt", "w", encoding="utf-8") as f_index:
         print(f"Link: {chapter_link}\n", file=f_index)
 
 # 第二步：再从每个文章页面链接里获取每章节内容
-with open("brihat_samhita_output.txt", "w", encoding="utf-8") as f_text:
+with open("brihat_samhita_output_sa.txt", "w", encoding="utf-8") as f_text:
     for _, _, chapter_link, chapter_name in search_results:
         page = urlopen(chapter_link)
         html = page.read().decode("UTF-8")
